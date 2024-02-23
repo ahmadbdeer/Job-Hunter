@@ -1,0 +1,79 @@
+c:\xampp\mysql\bin\mysql.exe -u root -p
+CREATE DATABASE jobhunt;
+
+ 
+
+*** Second Signup table:-
+USE jobhunt;
+
+ 
+
+CREATE TABLE tsignup (
+    User_id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    Fname VARCHAR(128),
+    Lname VARCHAR(128),
+    Phone VARCHAR(128),
+    Email VARCHAR(128),
+    Password VARCHAR(128),
+    Cpassword VARCHAR(128),
+    file_name VARCHAR(255)
+);
+
+ 
+
+*** Third Login table:-
+
+ 
+
+USE jobhunt;
+
+ 
+
+CREATE TABLE LoginTable (
+    User_id INT(10) UNSIGNED PRIMARY KEY,
+    Email VARCHAR(128),
+    Password VARCHAR(128)
+);
+
+ 
+
+
+*** Post a job search:-
+
+ 
+
+USE jobhunt;
+
+ 
+
+CREATE TABLE PostJob (
+    User_id INT(10) UNSIGNED PRIMARY KEY,
+    Fname VARCHAR(128),
+    Lname VARCHAR(128),
+    Job VARCHAR(128),
+    Experience VARCHAR(128),
+    Age INT(3),
+    Salary DECIMAL(10,2),
+    Nationality VARCHAR(128)
+);
+
+ 
+
+
+**** Forth Homepage Available Jobs :-
+
+ 
+
+USE jobhunt;
+
+ 
+
+CREATE TABLE JobMenu (
+    Job_id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    JobTitle VARCHAR(128),
+    JobDescription TEXT,
+    ExperienceRequired VARCHAR(128),
+    Salary DECIMAL(10,2),
+    Location VARCHAR(128),
+    CompanyName VARCHAR(128)
+);
